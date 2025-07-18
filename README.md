@@ -23,3 +23,11 @@
 2. Extract the ZIP file.
 3. Run the Nav0d Launcher.exe
 
+
+⚠️ Disclaimers & Important Notes
+📜 This launcher is not affiliated with Mojang or Microsoft. It’s intended for educational and personal use only. Please consider purchasing the official game to support the developers.
+
+💬 Command Line Notice: When you launch the game, some CMD (terminal) windows may briefly open and close — this is normal behavior used to start Minecraft in the background.
+
+⚠️ Important: If you are running the Nav0d Launcher.exe on Windows, please run it as Administrator. This is necessary for the launcher to function correctly and start Minecraft without permission issues.
+Right-click the .exe file and select Run as administrator.
