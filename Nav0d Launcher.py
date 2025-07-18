@@ -9,12 +9,14 @@ from PyQt5.QtWidgets import (
 from PyQt5.QtCore import Qt, QTimer, QProcess
 from PyQt5 import QtGui
 from minecraft_launcher_lib import install, command, utils
+import webbrowser
 
 translations = {
     "en": {
         "username": "Enter Username",
         "version": "Minecraft Version (e.g. 1.20.1)",
         "launch": "Launch",
+        "Donate": "Donate",
         "settings": "Settings",
         "logs": "Minecraft logs will appear here...",
         "save_settings": "Save Settings",
@@ -35,6 +37,7 @@ translations = {
         "username": "Όνομα χρήστη",
         "version": "Έκδοση Minecraft (π.χ. 1.20.1)",
         "launch": "Εκκίνηση",
+        "Donate": "Donate",
         "settings": "Ρυθμίσεις",
         "logs": "Τα αρχεία καταγραφής Minecraft θα εμφανιστούν εδώ...",
         "save_settings": "Αποθήκευση Ρυθμίσεων",
@@ -55,6 +58,7 @@ translations = {
         "username": "Introducir nombre de usuario",
         "version": "Versión de Minecraft (ej. 1.20.1)",
         "launch": "Iniciar",
+        "Donate": "Donate",
         "settings": "Configuración",
         "logs": "Los registros de Minecraft aparecerán aquí...",
         "save_settings": "Guardar configuración",
@@ -75,6 +79,7 @@ translations = {
         "username": "Entrez le nom d'utilisateur",
         "version": "Version de Minecraft (par exemple 1.20.1)",
         "launch": "Lancer",
+        "Donate": "Donate",
         "settings": "Paramètres",
         "logs": "Les journaux Minecraft apparaîtront ici...",
         "save_settings": "Enregistrer les paramètres",
@@ -95,6 +100,7 @@ translations = {
         "username": "Benutzernamen eingeben",
         "version": "Minecraft-Version (z.B. 1.20.1)",
         "launch": "starten",
+        "Donate": "Donate",
         "settings": "Einstellungen",
         "logs": "Minecraft-Protokolle werden hier angezeigt...",
         "save_settings": "Einstellungen speichern",
@@ -115,6 +121,7 @@ translations = {
         "username": "Digite o nome de usuário",
         "version": "Versão do Minecraft (ex: 1.20.1)",
         "launch": "Iniciar",
+        "Donate": "Donate",
         "settings": "Configurações",
         "logs": "Os registros do Minecraft aparecerão aqui...",
         "save_settings": "Salvar Configurações",
@@ -135,6 +142,7 @@ translations = {
         "username": "Введите имя пользователя",
         "version": "Версия Minecraft (например, 1.20.1)",
         "launch": "Запустить",
+        "Donate": "Donate",
         "settings": "Настройки",
         "logs": "Логи Minecraft будут отображаться здесь...",
         "save_settings": "Сохранить настройки",
@@ -223,6 +231,28 @@ class MinecraftLauncher(QWidget):
         """)
         button_layout.addWidget(self.launch_button)
 
+        self.donate = QPushButton()
+        self.donate.clicked.connect(self.donate_me)
+        self.donate.setFixedWidth(120)
+        self.donate.setFixedHeight(35)
+        self.donate.setStyleSheet("""
+            QPushButton {
+                background-color: #fac84f;
+                color: white;
+                border-radius: 6px;
+                font-weight: bold;
+                font-size: 14px;
+                padding: 6px;
+            }
+            QPushButton:hover {
+                background-color: #ffb500;
+            }
+            QPushButton:pressed {
+                background-color: #ffb500;
+            }
+        """)
+        button_layout.addWidget(self.donate)
+
         self.settings_button = QPushButton()
         self.settings_button.clicked.connect(self.open_settings)
         self.settings_button.setFixedWidth(120)
@@ -257,7 +287,12 @@ class MinecraftLauncher(QWidget):
         self.username_input.setPlaceholderText(tr["username"])
         self.version_input.setPlaceholderText(tr["version"])
         self.launch_button.setText(tr["launch"])
+        self.donate.setText(tr["Donate"])
         self.settings_button.setText(tr["settings"])
+
+    def donate_me(self):
+        webbrowser.open_new_tab("https://buy.stripe.com/test_00wdRbekg1gr1QDd7r7EQ00")
+
 
     def load_language_from_settings(self):
         if os.path.exists("settings.json"):
@@ -360,18 +395,27 @@ class MinecraftLauncher(QWidget):
     def open_log_window(self):
         if self.log_window is None:
             self.log_window = QWidget()
-            self.log_window.setWindowTitle("Minecraft Logs")
+            self.log_window.setWindowTitle("Logs")
             self.log_window.setFixedSize(600, 400)
 
             layout = QVBoxLayout()
+            
+            # Log output text box
             self.log_output = QPlainTextEdit()
             self.log_output.setReadOnly(True)
             layout.addWidget(self.log_output)
+
+            # Clear Text button
+            clear_text_button = QPushButton("Clear Logs")
+            clear_text_button.setFixedHeight(30)
+            clear_text_button.clicked.connect(self.log_output.clear)
+            layout.addWidget(clear_text_button)
 
             self.log_window.setLayout(layout)
 
         self.log_window.show()
         self.log_window.raise_()
+
 
     def open_settings(self):
         tr = translations.get(self.current_language, translations["en"])
