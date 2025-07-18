@@ -32,3 +32,11 @@
 
 ⚠️ Important: If you are running the Nav0d Launcher.exe on Windows, please run it as Administrator. This is necessary for the launcher to function correctly and start Minecraft without permission issues.
 Right-click the .exe file and select Run as administrator.
+
+
+## 💖 Support & Donations
+
+If you like this project, consider supporting its development:  
+👉 [Donate via Stripe](https://buy.stripe.com/test_00wdRbekg1gr1QDd7r7EQ00)
+
+---
