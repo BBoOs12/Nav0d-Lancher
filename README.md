@@ -20,8 +20,6 @@
 ## 📥 Install & Run
 
 1. Download the latest release from [GitHub Releases](https://github.com/BBoOs12/Nav0d-Lancher/releases/tag/Nav0d_Launcher-v1.2)  
-2. Extract the ZIP file.  
-3. Make sure you have Python 3.6+ installed (you can check with `python --version`).  
-4. Run it:
-   ```bash
-   python nav0d_launcher.py
+2. Extract the ZIP file.
+3. Run the Nav0d Launcher.exe
+
