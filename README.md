@@ -9,11 +9,11 @@
 
 Here’s a preview of the Nav0d Launcher in action:
 
-<img width="500" height="510" alt="Screenshot 2025-07-18 195358" src="https://github.com/user-attachments/assets/6f4a57a5-71a3-41e1-bf60-45ed3410f3fa" />
-<img width="502" height="508" alt="Screenshot 2025-07-18 195520" src="https://github.com/user-attachments/assets/29d480e4-2fa2-45c7-815e-1f8a0962f2da" />
+<img width="300" alt="Screenshot 1" src="https://github.com/user-attachments/assets/6f4a57a5-71a3-41e1-bf60-45ed3410f3fa" />
+<img width="300" alt="Screenshot 2" src="https://github.com/user-attachments/assets/29d480e4-2fa2-45c7-815e-1f8a0962f2da" />
 
-<img width="362" height="426" alt="Screenshot 2025-07-18 195439" src="https://github.com/user-attachments/assets/404919e8-094a-4098-986b-c5efa85cc650" />
-<img width="601" height="426" alt="Screenshot 2025-07-18 195422" src="https://github.com/user-attachments/assets/80f60e3b-52dc-4fa5-a293-c543269f9bcc" />
+<img width="250" alt="Screenshot 3" src="https://github.com/user-attachments/assets/404919e8-094a-4098-986b-c5efa85cc650" />
+<img width="350" alt="Screenshot 4" src="https://github.com/user-attachments/assets/80f60e3b-52dc-4fa5-a293-c543269f9bcc" />
 
 ---
 ## 🧩 What It Does
