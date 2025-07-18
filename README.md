@@ -2,7 +2,7 @@
 
 **Nav0d Launcher** is a lightweight, Python-based Minecraft launcher for Windows and Linux. It lets you play offline or cracked Minecraft without ads or malware—clean, safe, and open-source.
 
-![Python](https://img.shields.io/badge/python-3.6%2B-blue) ![License](https://img.shields.io/github/license/BBoOs12/Nav0d-Lancher) ![Downloads](https://img.shields.io/github/downloads/BBoOs12/Nav0d-Lancher/total)
+![Python](https://img.shields.io/badge/python-3.6%2B-blue) 
 
 ---
 
