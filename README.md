@@ -13,3 +13,6 @@ Nav0d Launcher is a lightweight, Python-based Minecraft launcher for Windows and
 📜 This launcher is not affiliated with Mojang or Microsoft. It’s for educational and personal use only. Please consider purchasing the official game to support the developers.
 
 💬 Command Line Notice: When you launch the game, some CMD (terminal) windows may briefly open and close — this is normal behavior used to start Minecraft in the background.
+
+📥 Download:
+👉 You can install it from the latest release [here](https://github.com/BBoOs12/Nav0d-Lancher/releases/tag/Nav0d_Launcher-v1.2)
